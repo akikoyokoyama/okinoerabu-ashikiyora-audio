@@ -1,225 +1,235 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>沖永良部島 芦清良の原風景 ―夫の聞き書き―</title>
-<style>
-  :root {
-    --paper: #eee7da;
-    --paper-light: #f6f1e8;
-    --ink: #3e3a36;
-    --muted: #8f877d;
-    --line: #c8bfb3;
-    --side: #aaa095;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--side);
-    color: var(--ink);
-    font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
-    line-height: 1.8;
-  }
-  .page {
-    width: min(920px, calc(100% - 36px));
-    min-height: 100vh;
-    margin: 0 auto;
-    padding: 72px 72px 80px;
-    background: var(--paper);
-    box-shadow: 0 0 22px rgba(0,0,0,.08);
-  }
-  header {
-    text-align: center;
-    padding: 20px 0 46px;
-  }
-  .eyebrow {
-    margin: 0 0 12px;
-    font-size: .85rem;
-    letter-spacing: .18em;
-  }
-  h1 {
-    margin: 0;
-    font-weight: 500;
-    font-size: clamp(2rem, 6vw, 3.35rem);
-    letter-spacing: .09em;
-    line-height: 1.45;
-  }
-  .subtitle {
-    margin: 10px 0 0;
-    font-size: 1.08rem;
-    letter-spacing: .22em;
-  }
-  .ornament {
-    width: 88px;
-    height: 1px;
-    margin: 34px auto 0;
-    background: var(--ink);
-    opacity: .65;
-  }
-  .intro {
-    max-width: 640px;
-    margin: 0 auto 48px;
-    text-align: center;
-    font-size: .95rem;
-  }
-  .stories {
-    max-width: 680px;
-    margin: 0 auto;
-    border-top: 1px solid var(--line);
-  }
-  .story {
-    display: grid;
-    grid-template-columns: 5.2em 1fr auto;
-    gap: 18px;
-    align-items: center;
-    padding: 20px 10px;
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid var(--line);
-    transition: background .18s ease, transform .18s ease;
-  }
-  .story:hover, .story:focus {
-    background: rgba(255,255,255,.30);
-    transform: translateX(3px);
-  }
-  .number {
-    color: var(--muted);
-    font-size: .82rem;
-    letter-spacing: .08em;
-  }
-  .shimamuni {
-    font-size: 1.12rem;
-    letter-spacing: .04em;
-  }
-  .japanese {
-    display: block;
-    margin-top: 2px;
-    color: #6f6861;
-    font-size: .82rem;
-    letter-spacing: .03em;
-  }
-  .arrow {
-    color: var(--muted);
-    font-size: 1.1rem;
-  }
-  footer {
-    margin-top: 62px;
-    text-align: center;
-    color: #756e67;
-    font-size: .78rem;
-    letter-spacing: .05em;
-  }
-  @media (max-width: 650px) {
-    body { background: var(--paper); }
-    .page {
-      width: 100%;
-      min-height: 100vh;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>沖永良部島芦清良の原風景 ― 音声資料</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
       margin: 0;
-      padding: 38px 18px 48px;
-      box-shadow: none;
+      background: #f3f0e9;
+      color: #393631;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+      line-height: 1.9;
     }
+
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 80px 28px 64px;
+    }
+
     header {
-      padding: 10px 0 30px;
+      text-align: center;
+      margin-bottom: 58px;
     }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      color: #8a8378;
+      margin-bottom: 18px;
+    }
+
     h1 {
-      font-size: clamp(1.8rem, 9vw, 2.55rem);
-      letter-spacing: .05em;
+      margin: 0;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
     }
+
     .subtitle {
-      font-size: .95rem;
-      letter-spacing: .12em;
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #777065;
     }
+
     .intro {
-      margin-bottom: 34px;
-      font-size: .88rem;
-      text-align: left;
+      max-width: 680px;
+      margin: 0 auto 54px;
+      font-size: 0.98rem;
+      text-align: justify;
     }
-    .intro br { display: none; }
-    .story {
-      grid-template-columns: 1fr auto;
-      gap: 5px 10px;
-      padding: 16px 4px;
+
+    .contents-title {
+      margin: 0 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #cfc8bb;
+      font-size: 0.82rem;
+      font-weight: normal;
+      letter-spacing: 0.18em;
+      color: #777065;
     }
+
+    .story-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid #d8d1c5;
+    }
+
+    .story-list li {
+      border-bottom: 1px solid #d8d1c5;
+    }
+
+    .story-list a {
+      display: grid;
+      grid-template-columns: 3rem 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 22px 8px;
+      color: inherit;
+      text-decoration: none;
+      transition: background 0.15s ease, padding 0.15s ease;
+    }
+
+    .story-list a:hover {
+      background: rgba(255,255,255,0.45);
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
     .number {
-      grid-column: 1;
-      font-size: .76rem;
+      color: #999185;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
     }
+
     .shimamuni {
-      grid-column: 1;
+      display: block;
+      font-size: 1.16rem;
+      letter-spacing: 0.04em;
+    }
+
+    .japanese {
+      display: block;
+      margin-top: 2px;
+      color: #827b70;
+      font-size: 0.82rem;
+    }
+
+    .arrow {
+      color: #aaa195;
       font-size: 1rem;
     }
-    .arrow {
-      grid-column: 2;
-      grid-row: 1 / span 2;
-      align-self: center;
-    }
+
     footer {
-      margin-top: 48px;
-      font-size: .72rem;
+      margin-top: 62px;
+      padding-top: 24px;
+      border-top: 1px solid #cfc8bb;
+      text-align: center;
+      color: #817a70;
+      font-size: 0.78rem;
+      line-height: 1.8;
     }
-  }
-</style>
+
+    @media (max-width: 560px) {
+      main { padding: 52px 20px 44px; }
+      header { margin-bottom: 42px; }
+      .intro { margin-bottom: 42px; }
+      .story-list a {
+        grid-template-columns: 2.2rem 1fr auto;
+        gap: 10px;
+        padding: 18px 4px;
+      }
+      .shimamuni { font-size: 1.05rem; }
+    }
+  </style>
 </head>
+
 <body>
-<main class="page">
+<main>
   <header>
-    <p class="eyebrow">清村美代子・清村平三</p>
-    <h1>沖永良部島<br>芦清良の原風景</h1>
-    <p class="subtitle">― 夫の聞き書き ―</p>
-    <div class="ornament"></div>
+    <div class="eyebrow">SHIMAMUNI AUDIO ARCHIVE</div>
+    <h1>沖永良部島 芦清良の原風景</h1>
+    <div class="subtitle">しまむに音声資料</div>
   </header>
 
   <section class="intro">
-    <p>
-      このページでは、清村美代子・清村平三（2026）<br>
-      『沖永良部島芦清良の原風景 ―夫の聞き書き―』（国立国語研究所発行）に<br>
-      収録された音声を公開しています。
-    </p>
+    このページでは、清村美代子・清村平三（2026）『沖永良部島芦清良の原風景 ―夫の聞き書き―』（国立国語研究所発行）に収録された音声を公開しています。
   </section>
 
-  <nav class="stories" aria-label="おはなし一覧">
-    <a class="story" href="01_mizukumi.html">
-      <span class="number">第一話</span>
-      <span class="shimamuni">みじくみぬ はなしどー<span class="japanese">水汲みの 話だよ</span></span>
-      <span class="arrow">›</span>
-    </a>
-    <a class="story" href="2_taafunasshi.html">
-      <span class="number">第二話</span>
-      <span class="shimamuni">たーふなし<span class="japanese">代掻き〔田植え準備〕</span></span>
-      <span class="arrow">›</span>
-    </a>
-    <a class="story" href="3_nikimeenu taafunashi.html">
-      <span class="number">第三話</span>
-      <span class="shimamuni">にきめーぬ たーふなし<span class="japanese">二期米の 代掻き</span></span>
-      <span class="arrow">›</span>
-    </a>
-    <a class="story" href="4_taauitu inihai.html">
-      <span class="number">第四話</span>
-      <span class="shimamuni">たーういとぅ いにはい<span class="japanese">田植えと 稲刈り</span></span>
-      <span class="arrow">›</span>
-    </a>
-    <a class="story" href="5_shoogachimuge.html">
-      <span class="number">第五話</span>
-      <span class="shimamuni">しょーがち むげ<span class="japanese">正月 準備</span></span>
-      <span class="arrow">›</span>
-    </a>
-    <a class="story" href="6_satachikui.html">
-      <span class="number">第六話</span>
-      <span class="shimamuni">さたちくい<span class="japanese">黒砂糖づくり</span></span>
-      <span class="arrow">›</span>
-    </a>
-    <a class="story" href="7_sakichikui.html">
-      <span class="number">第七話</span>
-      <span class="shimamuni">さき ちくい<span class="japanese">酒 つくり</span></span>
-      <span class="arrow">›</span>
-    </a>
-  </nav>
+  <section>
+    <h2 class="contents-title">音声一覧</h2>
+    <ol class="story-list">
+      <li>
+        <a href="01_mizukumi.html">
+          <span class="number">01</span>
+          <span>
+            <span class="shimamuni">みじくみぬ　はなしどー</span>
+            <span class="japanese">水汲みの話</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="2_taafunassji.html">
+          <span class="number">02</span>
+          <span>
+            <span class="shimamuni">たーふなし</span>
+            <span class="japanese">代掻きの話</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="3_nikimeenu taafunashi.html">
+          <span class="number">03</span>
+          <span>
+            <span class="shimamuni">にきめーぬ　たーふなし</span>
+            <span class="japanese">二期米の代掻きの話</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="4_taauitu inihai.html">
+          <span class="number">04</span>
+          <span>
+            <span class="shimamuni">たーういとぅ　いにはい</span>
+            <span class="japanese">田植えと稲刈りの話</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="5_しょーがちむげ.html">
+          <span class="number">05</span>
+          <span>
+            <span class="shimamuni">しょーがち　むげ</span>
+            <span class="japanese">正月準備の話</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="6_satachikui.html">
+          <span class="number">06</span>
+          <span>
+            <span class="shimamuni">さたちくい</span>
+            <span class="japanese">黒砂糖づくりの話</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="7_さきちくい.html">
+          <span class="number">07</span>
+          <span>
+            <span class="shimamuni">さきちくい</span>
+            <span class="japanese">酒つくりの話</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </li>
+    </ol>
+  </section>
 
   <footer>
-    <p>清村美代子・清村平三（2026）<br>
-    『沖永良部島芦清良の原風景 ―夫の聞き書き―』<br>
-    国立国語研究所</p>
+    清村美代子・清村平三『沖永良部島芦清良の原風景 ―夫の聞き書き―』<br>
+    国立国語研究所
   </footer>
 </main>
 </body>
